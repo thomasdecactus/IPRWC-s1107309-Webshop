@@ -1,0 +1,7 @@
+<ul id="nav-main-ul">
+    <li class="nav-mail-li"><a class="nav-main-a" routerLink="/producten">Home</a></li>
+    <li class="nav-mail-li"><a class="nav-main-a" routerLink="/overzicht">Overzicht</a></li>
+    <li class="nav-mail-li"><a class="nav-main-a" routerLink="/winkelmand">Winkelmand</a></li>
+    <li *ngIf="!isLoggedIn" class="nav-mail-li"><a class="nav-main-a" routerLink="/login">Login</a></li>
+    <li *ngIf="isLoggedIn" class="nav-mail-li"><a class="nav-main-a" (click)="logout()" routerLink="/producten">Log out</a></li>
+</ul>

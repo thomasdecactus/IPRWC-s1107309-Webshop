@@ -1,0 +1,85 @@
+<!-- SCHERM 1 - Beheerder-->
+<div class="contianer">
+    <ul id="nav-main-ul">
+        <li class="nav-mail-li"><a (click)="openCurrentTab()" class="nav-main-a">Huidige producten</a></li>
+        <li class="nav-mail-li"><a (click)="openAddProductsTab()" class="nav-main-a">Product toevoegen</a></li>
+        <li class="nav-mail-li"><a (click)="openOrdersTab()" class="nav-main-a">Bestellingen</a></li>
+        <li class="nav-mail-li"><a (click)="openCustomersTab()" class="nav-main-a">Klanten</a></li>
+    </ul>
+</div>
+
+<div *ngIf="currentProductsTabActive" class="currentProductsContainer">
+    <h1>Zie hier een overzicht van uw huidige producten</h1>
+    <div  id="producten-contrainer-main">
+        <div *ngFor="let product of products"  class="product-in-container">
+            <img src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Pizza">
+            <h3>{{ product.naam }}</h3>
+            <p>{{ product.prijs}} euro</p>
+            <p><a [routerLink]="['/','product',product.productid]">Meer info</a></p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="addProductsTabActive" class="addProductContainer">
+    <h1>Voeg hier producten toe</h1>
+    <div *ngIf="!bestellingMenuEnabled" id="producten-contrainer-main">
+        <div id="producten-container-sub">
+            <div class="product-in-container">
+                <h1>Wijzig informatie:</h1>
+                <form class="login-container-main" (ngSubmit)="addNewProduct(f)" #f="ngForm" class="input-box">
+                    <div class="login-container-main">
+                        <input class="item" type="text" [(ngModel)]="naam" name="naam" ngModel required>
+            
+                        <input class="item" type="text" [(ngModel)]="beschrijving" name="beschrijving" ngModel required>
+                
+                        <input class="item" type="text" [(ngModel)]="afbeeldinglink" name="afbeeldinglink" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="prijs" name="prijs" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="voorraad" name="voorraad" ngModel required>
+                    
+                        <div>
+                            <input  type="checkbox" checked="checked" name="akkoord" required><a class="main-text-style-grey">Ik heb mijn gegevens goed gecontrolleerd en weet dat ze kloppen!</a>     
+                        </div>
+
+                        <div>
+                            <input  type="checkbox" checked="checked" name="akkoord" required><a class="main-text-style-grey">Ik snap dat alle gegevens worden gewijzigd als ik op de wijzig knop klik.</a>     
+                        </div>
+                       
+                        <button class="item" type="submit">Voeg toe</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div *ngIf="ordersTabActive" class="ordersContainer">
+    <h1>Zie hier bestellingen in</h1>
+    <div id="producten-contrainer-main">
+        <div id="producten-container-sub">
+            <div *ngFor="let bestelling of bestellingen"  class="product-in-container">
+                <img src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Pizza">
+                <h3>Bestelnummer: {{ bestelling.bestellingid }}</h3>
+                <p>orderdatum: {{ bestelling.datum }}</p>
+                <p>totaalprijs: {{ bestelling.totaalprijs }} euro</p>
+                <p>status: {{ bestelling.status }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="customersTabActive" class="custumersContainer">
+    <h1>Zie hier klantgegevens in</h1>
+    <div id="producten-contrainer-main">
+        <div id="producten-container-sub">
+            <div *ngFor="let user of users" class="product-in-container">
+                <h3>Klant naam: {{ user.voornaam + " " + user.achternaam }} </h3>
+                <p>Klant wachtwoord: {{ user.wachtwoord }} </p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,6 @@
+<h1 class="error-main-text"> {{ product?.naam }}</h1>
+<h5 class="product-sub-sub-text">product id: {{productid}}</h5>
+<p class="error-sub-text">Omschrijving van het product: {{ product?.beschrijving  }}</p>
+<img class="error-main-image" src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Camera">
+<h2 class="error-main-text">Prijs: {{ product?.prijs }} euro </h2>
+<button id="error-main-button" (click)="addProductToShoppingcard()"><a id="error-main-link">Toevoegen aan winkelmand</a></button>

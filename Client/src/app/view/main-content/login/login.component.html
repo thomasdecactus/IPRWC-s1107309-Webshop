@@ -1,0 +1,29 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="login-container-main">
+        <input  
+            type="email" 
+            placeholder="email" 
+            name="email" 
+            required
+            ngModel
+        >
+    </div>
+    <div class="login-container-main">
+        <input  
+            type="password" 
+            placeholder="password" 
+            name="password" 
+            required
+            minlength="3"
+            ngModel
+        >
+    </div>
+    <div class="login-container-main">
+        <input  type="checkbox" checked="checked" name="akkoord" required><a class="main-text-style-grey">Akkoord met de voorwaarde.</a>     
+    </div>
+    <div class="login-container-main">
+        <button 
+            type="submit"
+        >Login</button>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<div id="producten-contrainer-main">
+    <h2 id="producten-text-main">Kies hier uw producten</h2>
+    <div id="producten-container-sub">
+        <div *ngFor="let product of products"  class="product-in-container">
+            <img src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Pizza">
+            <h3>{{ product.naam }}</h3>
+            <p>{{ product.prijs}} euro</p>
+            <p><a [routerLink]="['/','product',product.productid]">Meer info</a></p>
+        </div>
+    </div>
+</div>

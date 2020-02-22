@@ -1,0 +1,21 @@
+<div id="producten-contrainer-main">
+    <h2 id="producten-text-main">Hier een overzicht van uw gekozen producten</h2>
+    <div id="producten-container-sub">
+        <div *ngFor="let product of products" class="product-in-container">
+            <img src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Pizza">
+            <h3>{{ product.naam }}</h3>
+            <h3>Aantal: {{ product.aantalInWinkelmand }} </h3>
+            <h3>Prijs: {{ product.prijs }}</h3>
+            <h3>Totaalprijs: {{ product.totaalprijs }} </h3>
+            <p (click)="removeProduct(product.productid)">Verwijderen</p>
+            <p (click)="addOneProductToShoppingcard(product.productid)">Meer</p>
+            <p (click)="removeOneProductToShoppingcard(product.productid)">Minder</p>
+            <p [routerLink]="['/','product',product.productid]">Meer info</p>
+        </div> 
+    </div>
+</div>
+
+<button [disabled]="!products || !isLoggedIn" class="error-main-button" routerLink="/bestel"><a id="error-main-link"  >Afrekenen</a></button>
+<button  [disabled]="!products" (click)="emptyShoppingcard()" class="error-main-button"><a id="error-main-link">Leeg winkelmand</a></button>
+<p *ngIf="!isLoggedIn && products" class="error-text">Log eerst in om uw bestelling af te rekenen.</p>
+

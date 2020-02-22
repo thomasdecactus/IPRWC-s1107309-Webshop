@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  html{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+  }
+  
+  header{
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav{
+    padding: 0;
+    margin: 0;
+  }
+  
+  main{
+    padding: 0;
+    margin: 0;
+  }
+  
+  table{
+    padding: 0;
+    margin: 0;
+  }
+  
+  tr{
+    padding: 0;
+    margin: 0;
+  }
+  
+  th{
+    padding: 0;
+    margin: 0;
+  }
+  
+  td{
+    padding: 0;
+    margin: 0;
+  }
+  
+  ol{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  ul{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style:none;
+  }
+  
+  li{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  p{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 200;
+  }
+  
+  a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 200;
+  }
+  
+  h1{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  h2{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  h3{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  h4{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  h5{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  h6{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  div{
+    padding: 0;
+    margin: 0;
+  }
+  
+  section{
+    padding: 0;
+    margin: 0;
+  }
+  
+  article{
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer{
+    padding: 0;
+    margin: 0;
+  }
+  
+  form{
+    padding: 0;
+    margin: 0;
+  }
+  
+  input{
+    padding: 0;
+    margin: 0;
+  }
+  
+  abbr{
+      text-decoration: none;
+  }
+  
+.sub-container {
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}

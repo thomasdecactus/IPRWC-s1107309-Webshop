@@ -1,0 +1,16 @@
+<!-- SCHERM 2 -> account gegevens gebruiken -->
+<div *ngIf="!gegevensKloppen">
+    <h2>Kloppen uw gegevens?</h2>
+    <h3>Naam: {{ naam }}</h3>
+    <h3>Adres: {{ adres }}</h3>
+    <h3>Totaal prijs: {{ totaalprijs }}</h3>
+    <h3>Totaal aantal: {{ totaalaantal }}</h3>
+    <button id="error-main-button"><a id="error-main-link" (click)="gegevensKloppenZeker()">Gegevens kloppen!</a></button>
+    <button id="error-main-button"><a id="error-main-link" routerLink="/overzicht">Dit klopt niet..</a></button>
+</div>
+
+
+<div *ngIf="gegevensKloppen">
+    <h1>Uw bestelling is geplaatst!</h1>
+</div>
+

@@ -1,0 +1,83 @@
+
+<div *ngIf="!userIsLoggedIn">
+    <app-error-not-loged-in></app-error-not-loged-in>
+</div>
+
+
+<!-- SCHERM 2 - klant-->
+<div *ngIf="userIsLoggedIn">
+
+    <h1>Welkom op uw overzichtpagina</h1>
+
+    <button class="error-main-button" (click)="openBestellingen()"><a class="error-main-link" >Bestellingen</a></button>
+    <button class="error-main-button" (click)="openInformatie()"><a class="error-main-link" >Persoonlijke informatie</a></button>
+    <button *ngIf="userIsAdmin" class="error-main-button" (click)="openAdmin()"><a class="error-main-link" >Admin pagina</a></button>
+
+    <!-- SCHERM 2A - klant bestellingen-->
+    <div *ngIf="bestellingMenuEnabled" id="producten-contrainer-main">
+        <h2 id="producten-text-main">Hier staan uw bestellingen op een rijtje</h2>
+        <div id="producten-container-sub">
+            <div *ngFor="let bestelling of bestellingen"  class="product-in-container">
+                <img src="http://www.photofacts.nl/fotografie/foto/apparatuur/canon/canon_1d_mark_ii.jpg" alt="Camera">
+                <h3>Bestelnummer: {{ bestelling.bestellingid }}</h3>
+                <p>orderdatum: {{ bestelling.datum }}</p>
+                <p>totaalprijs: {{ bestelling.totaalprijs }} euro</p>
+                <p>status: {{ bestelling.status }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHERM 2B - klant Informatie-->
+    <div *ngIf="informatieMenuEnabled" id="producten-contrainer-main">
+        <h2 id="producten-text-main">Hier staat uw persoonlijke informatie</h2>
+        <div id="producten-container-sub">
+            <div class="product-in-container">
+                <h1>Uw huidige informatie:</h1>
+                <h3>Naam: {{ thisUser.voornaam}} </h3>
+                <p>Email: {{ thisUser.email}}</p>
+                <p>Straatnaam: {{ thisUser.straat}}</p>
+                <p>Straatnummer: {{ thisUser.huisnummer}}</p>
+                <p>Postcode: {{ thisUser.postcode}}</p>
+                <p>Woonplaats: {{ thisUser.stad}}</p>
+            </div>
+            <div class="product-in-container">
+                <h1>Wijzig informatie:</h1>
+                <form class="login-container-main" (ngSubmit)="onChangeInformation(f)" #f="ngForm" class="input-box">
+                    <div >
+                        <input class="item" type="text" [(ngModel)]="firstname" name="firstname" ngModel required>
+            
+                        <input class="item" type="text" [(ngModel)]="lastname" name="lastname" ngModel required>
+                
+                        <input class="item" type="text" [(ngModel)]="email" name="email" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="streetname" name="streetname" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="housenumber" name="housenumber" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="zipcode" name="zipcode" ngModel required>
+                    
+                        <input class="item" type="text" [(ngModel)]="city" name="city" ngModel required>                 
+                        
+                        <div>
+                            <input  class="main-text-style-grey" type="checkbox" checked="checked" name="akkoord" required><a class="main-text-style-grey">Ik heb mijn gegevens goed gecontrolleerd en weet dat ze kloppen!</a>     
+                        </div>
+                        
+                        <div>
+                            <input  class="main-text-style-grey" type="checkbox" checked="checked" name="akkoord" required><a class="main-text-style-grey">Ik snap dat alle gegevens worden gewijzigd als ik op de wijzig knop klik.</a>     
+                        </div>
+                        
+                        <button class="item" type="submit">Wijzig</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHERM 2C - Admin pagina-->
+    <div *ngIf="adminMenuEnabled" id="producten-contrainer-main">
+        <app-beheerder></app-beheerder>
+    </div>
+
+
+</div>

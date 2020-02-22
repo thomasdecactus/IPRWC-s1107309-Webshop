@@ -1,0 +1,21 @@
+#nav-main-ul{
+    padding: 3vh 2vw 7vh 2vw; /* top right bottem left */
+    list-style-type:none;
+    width: 80vw;
+    text-align: center;
+    background: #FFFFFF;
+    margin: auto; 
+}
+
+.nav-mail-li{
+    display: inline;
+    padding: 2%;
+}
+
+.nav-main-a{
+    text-decoration: none;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+}
+
+

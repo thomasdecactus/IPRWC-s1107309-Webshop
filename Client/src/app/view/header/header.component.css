@@ -1,0 +1,13 @@
+#header_main-text{
+    width: 100vw;
+    text-align: center;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+    background-color: #FFFFFF;
+}
+
+#header_main-line{
+    width: 80vw;
+    color: #969da4;
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,93 @@
+#producten-contrainer-main{
+    border: 1px solid #969da4;
+}
+
+#producten-text-main{
+    color: #969da4;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#producten-container-sub{
+    background-color: transparent;
+}
+
+.product-in-container{
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    background-color: transparant;
+    border: 1px solid #969da4;
+}
+
+.product-in-container img{
+    width: 30%;
+    margin: 5px;
+}
+
+.product-in-container h3{
+    color: #969da4;
+}
+
+.product-in-container p{
+    color: #969da4;
+}
+
+.error-text {
+    color: #c01515;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#error-main-text{
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+    text-align: left;
+}
+
+#error-sub-text{
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.error-main-button{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #969da4;
+    border: 1px solid #969da4;
+}
+
+.error-main-button:disabled{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #c2c2c2;
+    color: #c2c2c2;
+    border: 6px solid c2c2c2;
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+#error-main-link{
+    text-decoration: none;
+    color: #969da4;
+}

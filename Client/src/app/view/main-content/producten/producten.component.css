@@ -1,0 +1,35 @@
+#producten-contrainer-main{
+    border: 1px solid #969da4;
+}
+
+#producten-text-main{
+    color: #969da4;
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#producten-container-sub{
+    background-color: transparent;
+}
+
+.product-in-container{
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    background-color: transparant;
+    border: 1px solid #969da4;
+}
+
+.product-in-container img{
+    width: 30%;
+    margin: 5px;
+}
+
+.product-in-container h3{
+    color: #969da4;
+}
+
+.product-in-container p{
+    color: #969da4;
+}

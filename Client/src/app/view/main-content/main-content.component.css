@@ -1,0 +1,12 @@
+#main-content-main-container{
+    width: 80vw;
+    height: 60vh;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+}
+
+.main-text-style-grey{
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+}

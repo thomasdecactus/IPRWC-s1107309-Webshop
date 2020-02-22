@@ -1,0 +1,27 @@
+.main-text-style-grey{
+    font-family: Calibri Light, Calibri, Arial , sans-serif;
+    color: #969da4;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: 1000;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+#succes-container{
+    width: 70%;
+    margin: auto;
+    margin-top: 15vh;
+    border: 1px solid #969da4;
+}
+
+@media screen and (max-width: 600) {
+    #succes-container{
+        width: 100%;
+    }
+}
